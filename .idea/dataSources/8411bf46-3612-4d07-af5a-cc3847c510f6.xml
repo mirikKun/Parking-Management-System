@@ -789,16 +789,16 @@ false posixrules
     <database id="2" parent="1" name="database_parking">
       <ObjectId>61141</ObjectId>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>56267</IntrospectionStateNumber>
+      <IntrospectionStateNumber>56386</IntrospectionStateNumber>
       <Current>1</Current>
-      <Relations>sequence|table|61142|61144|1
-sequence|table|61153|61155|1
-sequence|table|61214|61216|1
-sequence|table|61166|61168|1
-sequence|table|61174|61176|1
-sequence|table|61190|61192|1
-sequence|table|61203|61205|1
-sequence|table|61230|61232|1
+      <Relations>sequence|table|61579|61581|1
+sequence|table|61590|61592|1
+sequence|table|61603|61605|1
+sequence|table|61611|61613|1
+sequence|table|61624|61626|1
+sequence|table|61637|61639|1
+sequence|table|61648|61650|1
+sequence|table|61664|61666|1
 </Relations>
     </database>
     <database id="3" parent="1" name="database_school">
@@ -847,7 +847,7 @@ sequence|table|61230|61232|1
       <Comment>standard public schema</Comment>
       <StateNumber>562</StateNumber>
       <Owner>postgres</Owner>
-      <IntrospectionStateNumber>56268</IntrospectionStateNumber>
+      <IntrospectionStateNumber>56387</IntrospectionStateNumber>
       <Current>1</Current>
     </schema>
     <access-method id="12" parent="2" name="btree">
@@ -893,115 +893,115 @@ sequence|table|61230|61232|1
     <language id="21" parent="2" name="plpgsql"/>
     <language id="22" parent="2" name="sql"/>
     <sequence id="23" parent="11" name="accounts_id_seq">
-      <ObjectId>61203</ObjectId>
+      <ObjectId>61637</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56264</StateNumber>
+      <StateNumber>56382</StateNumber>
     </sequence>
     <sequence id="24" parent="11" name="admins_id_seq">
-      <ObjectId>61214</ObjectId>
+      <ObjectId>61648</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56265</StateNumber>
+      <StateNumber>56383</StateNumber>
     </sequence>
     <sequence id="25" parent="11" name="floors_id_seq">
-      <ObjectId>61174</ObjectId>
+      <ObjectId>61611</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56262</StateNumber>
+      <StateNumber>56380</StateNumber>
     </sequence>
     <sequence id="26" parent="11" name="parkings_id_seq">
-      <ObjectId>61166</ObjectId>
+      <ObjectId>61603</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56261</StateNumber>
+      <StateNumber>56379</StateNumber>
     </sequence>
     <sequence id="27" parent="11" name="payments_id_seq">
-      <ObjectId>61142</ObjectId>
+      <ObjectId>61579</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56259</StateNumber>
+      <StateNumber>56377</StateNumber>
     </sequence>
     <sequence id="28" parent="11" name="spots_id_seq">
-      <ObjectId>61190</ObjectId>
+      <ObjectId>61624</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56263</StateNumber>
+      <StateNumber>56381</StateNumber>
     </sequence>
     <sequence id="29" parent="11" name="tickets_id_seq">
-      <ObjectId>61153</ObjectId>
+      <ObjectId>61590</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56260</StateNumber>
+      <StateNumber>56378</StateNumber>
     </sequence>
     <sequence id="30" parent="11" name="vehicles_id_seq">
-      <ObjectId>61230</ObjectId>
+      <ObjectId>61664</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56266</StateNumber>
+      <StateNumber>56384</StateNumber>
     </sequence>
     <table id="31" parent="11" name="accounts">
-      <ObjectId>61205</ObjectId>
+      <ObjectId>61639</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56265</StateNumber>
+      <StateNumber>56383</StateNumber>
     </table>
     <table id="32" parent="11" name="admins">
-      <ObjectId>61216</ObjectId>
+      <ObjectId>61650</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56265</StateNumber>
+      <StateNumber>56383</StateNumber>
     </table>
     <table id="33" parent="11" name="floors">
-      <ObjectId>61176</ObjectId>
+      <ObjectId>61613</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56263</StateNumber>
+      <StateNumber>56381</StateNumber>
     </table>
     <table id="34" parent="11" name="parkings">
-      <ObjectId>61168</ObjectId>
+      <ObjectId>61605</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56262</StateNumber>
+      <StateNumber>56380</StateNumber>
     </table>
     <table id="35" parent="11" name="payments">
-      <ObjectId>61144</ObjectId>
+      <ObjectId>61581</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56260</StateNumber>
+      <StateNumber>56378</StateNumber>
     </table>
     <table id="36" parent="11" name="spots">
-      <ObjectId>61192</ObjectId>
+      <ObjectId>61626</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56263</StateNumber>
+      <StateNumber>56381</StateNumber>
     </table>
     <table id="37" parent="11" name="tickets">
-      <ObjectId>61155</ObjectId>
+      <ObjectId>61592</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56260</StateNumber>
+      <StateNumber>56378</StateNumber>
     </table>
     <table id="38" parent="11" name="vehicles">
-      <ObjectId>61232</ObjectId>
+      <ObjectId>61666</ObjectId>
       <Owner>postgres</Owner>
-      <StateNumber>56266</StateNumber>
+      <StateNumber>56384</StateNumber>
     </table>
     <column id="39" parent="31" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>56264</StateNumber>
+      <StateNumber>56382</StateNumber>
       <DefaultExpression>nextval(&apos;accounts_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="40" parent="31" name="username">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>56264</StateNumber>
+      <StateNumber>56382</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="41" parent="31" name="password">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>56264</StateNumber>
+      <StateNumber>56382</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="42" parent="31" name="accounts_pkey">
-      <ObjectId>61212</ObjectId>
-      <StateNumber>56264</StateNumber>
+      <ObjectId>61646</ObjectId>
+      <StateNumber>56382</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="43" parent="31" name="accounts_pkey">
-      <ObjectId>61213</ObjectId>
-      <StateNumber>56264</StateNumber>
+      <ObjectId>61647</ObjectId>
+      <StateNumber>56382</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>accounts_pkey</UnderlyingIndexName>
@@ -1010,59 +1010,59 @@ sequence|table|61230|61232|1
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>56265</StateNumber>
+      <StateNumber>56383</StateNumber>
       <DefaultExpression>nextval(&apos;admins_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="45" parent="32" name="name">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>56265</StateNumber>
+      <StateNumber>56383</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="46" parent="32" name="address">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>56265</StateNumber>
+      <StateNumber>56383</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="47" parent="32" name="email">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>56265</StateNumber>
+      <StateNumber>56383</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="48" parent="32" name="phone">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>56265</StateNumber>
+      <StateNumber>56383</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="49" parent="32" name="account_id">
       <Position>6</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>56265</StateNumber>
+      <StateNumber>56383</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="50" parent="32" name="admins_pkey">
-      <ObjectId>61223</ObjectId>
-      <StateNumber>56265</StateNumber>
+      <ObjectId>61657</ObjectId>
+      <StateNumber>56383</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="51" parent="32" name="admins_pkey">
-      <ObjectId>61224</ObjectId>
-      <StateNumber>56265</StateNumber>
+      <ObjectId>61658</ObjectId>
+      <StateNumber>56383</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>admins_pkey</UnderlyingIndexName>
     </key>
     <foreign-key id="52" parent="32" name="fk_admins_to_accounts">
-      <ObjectId>61225</ObjectId>
-      <StateNumber>56265</StateNumber>
+      <ObjectId>61659</ObjectId>
+      <StateNumber>56383</StateNumber>
       <ColNames>account_id</ColNames>
-      <RefTableId>61205</RefTableId>
+      <RefTableId>61639</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>accounts</RefTableName>
       <RefKeyName>accounts_pkey</RefKeyName>
@@ -1074,76 +1074,78 @@ sequence|table|61230|61232|1
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>56262</StateNumber>
+      <StateNumber>56380</StateNumber>
       <DefaultExpression>nextval(&apos;floors_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="54" parent="33" name="floor_number">
       <Position>2</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>56262</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>56380</StateNumber>
+      <TypeId>23</TypeId>
     </column>
     <column id="55" parent="33" name="spot_number">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
-      <StateNumber>56262</StateNumber>
-      <TypeId>1043</TypeId>
+      <DataType>integer|0s</DataType>
+      <StateNumber>56380</StateNumber>
+      <TypeId>23</TypeId>
     </column>
     <column id="56" parent="33" name="parking_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>56262</StateNumber>
+      <StateNumber>56380</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="57" parent="33" name="floors_pkey">
-      <ObjectId>61183</ObjectId>
-      <StateNumber>56262</StateNumber>
+      <ObjectId>61617</ObjectId>
+      <StateNumber>56380</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="58" parent="33" name="floors_pkey">
-      <ObjectId>61184</ObjectId>
-      <StateNumber>56262</StateNumber>
+      <ObjectId>61618</ObjectId>
+      <StateNumber>56380</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>floors_pkey</UnderlyingIndexName>
     </key>
     <foreign-key id="59" parent="33" name="fk_floors_to_parkings">
-      <ObjectId>61185</ObjectId>
-      <StateNumber>56262</StateNumber>
+      <ObjectId>61619</ObjectId>
+      <StateNumber>56380</StateNumber>
       <ColNames>parking_id</ColNames>
-      <RefTableId>61168</RefTableId>
+      <RefTableId>61605</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>parkings</RefTableName>
       <RefKeyName>parkings_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <column id="60" parent="34" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>56261</StateNumber>
+      <StateNumber>56379</StateNumber>
       <DefaultExpression>nextval(&apos;parkings_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="61" parent="34" name="address">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>56261</StateNumber>
+      <StateNumber>56379</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="62" parent="34" name="parkings_pkey">
-      <ObjectId>61172</ObjectId>
-      <StateNumber>56261</StateNumber>
+      <ObjectId>61609</ObjectId>
+      <StateNumber>56379</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="63" parent="34" name="parkings_pkey">
-      <ObjectId>61173</ObjectId>
-      <StateNumber>56261</StateNumber>
+      <ObjectId>61610</ObjectId>
+      <StateNumber>56379</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>parkings_pkey</UnderlyingIndexName>
@@ -1152,44 +1154,44 @@ sequence|table|61230|61232|1
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>56259</StateNumber>
+      <StateNumber>56377</StateNumber>
       <DefaultExpression>nextval(&apos;payments_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="65" parent="35" name="creation_date">
       <Position>2</Position>
       <DataType>date|0s</DataType>
-      <StateNumber>56259</StateNumber>
+      <StateNumber>56377</StateNumber>
       <TypeId>1082</TypeId>
     </column>
     <column id="66" parent="35" name="amount">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>56259</StateNumber>
+      <StateNumber>56377</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <column id="67" parent="35" name="status">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>56259</StateNumber>
+      <StateNumber>56377</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="68" parent="35" name="type">
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>56259</StateNumber>
+      <StateNumber>56377</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="69" parent="35" name="payments_pkey">
-      <ObjectId>61151</ObjectId>
-      <StateNumber>56259</StateNumber>
+      <ObjectId>61588</ObjectId>
+      <StateNumber>56377</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="70" parent="35" name="payments_pkey">
-      <ObjectId>61152</ObjectId>
-      <StateNumber>56259</StateNumber>
+      <ObjectId>61589</ObjectId>
+      <StateNumber>56377</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>payments_pkey</UnderlyingIndexName>
@@ -1198,47 +1200,47 @@ sequence|table|61230|61232|1
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>56263</StateNumber>
+      <StateNumber>56381</StateNumber>
       <DefaultExpression>nextval(&apos;spots_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="72" parent="36" name="is_free">
       <Position>2</Position>
       <DataType>boolean|0s</DataType>
-      <StateNumber>56263</StateNumber>
+      <StateNumber>56381</StateNumber>
       <TypeId>16</TypeId>
     </column>
     <column id="73" parent="36" name="type">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>56263</StateNumber>
+      <StateNumber>56381</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <column id="74" parent="36" name="floor_id">
       <Position>4</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>56263</StateNumber>
+      <StateNumber>56381</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="75" parent="36" name="spots_pkey">
-      <ObjectId>61196</ObjectId>
-      <StateNumber>56263</StateNumber>
+      <ObjectId>61630</ObjectId>
+      <StateNumber>56381</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="76" parent="36" name="spots_pkey">
-      <ObjectId>61197</ObjectId>
-      <StateNumber>56263</StateNumber>
+      <ObjectId>61631</ObjectId>
+      <StateNumber>56381</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>spots_pkey</UnderlyingIndexName>
     </key>
     <foreign-key id="77" parent="36" name="fk_spots_to_floors">
-      <ObjectId>61198</ObjectId>
-      <StateNumber>56263</StateNumber>
+      <ObjectId>61632</ObjectId>
+      <StateNumber>56381</StateNumber>
       <ColNames>floor_id</ColNames>
-      <RefTableId>61176</RefTableId>
+      <RefTableId>61613</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>floors</RefTableName>
       <RefKeyName>floors_pkey</RefKeyName>
@@ -1250,70 +1252,72 @@ sequence|table|61230|61232|1
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>56260</StateNumber>
+      <StateNumber>56378</StateNumber>
       <DefaultExpression>nextval(&apos;tickets_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="79" parent="37" name="creation_date">
       <Position>2</Position>
       <DataType>date|0s</DataType>
-      <StateNumber>56260</StateNumber>
+      <StateNumber>56378</StateNumber>
       <TypeId>1082</TypeId>
     </column>
     <column id="80" parent="37" name="payment_id">
       <Position>3</Position>
       <DataType>integer|0s</DataType>
-      <StateNumber>56260</StateNumber>
+      <StateNumber>56378</StateNumber>
       <TypeId>23</TypeId>
     </column>
     <index id="81" parent="37" name="tickets_pkey">
-      <ObjectId>61159</ObjectId>
-      <StateNumber>56260</StateNumber>
+      <ObjectId>61596</ObjectId>
+      <StateNumber>56378</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="82" parent="37" name="tickets_pkey">
-      <ObjectId>61160</ObjectId>
-      <StateNumber>56260</StateNumber>
+      <ObjectId>61597</ObjectId>
+      <StateNumber>56378</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>tickets_pkey</UnderlyingIndexName>
     </key>
     <foreign-key id="83" parent="37" name="fk_tickets_to_payments">
-      <ObjectId>61161</ObjectId>
-      <StateNumber>56260</StateNumber>
+      <ObjectId>61598</ObjectId>
+      <StateNumber>56378</StateNumber>
       <ColNames>payment_id</ColNames>
-      <RefTableId>61144</RefTableId>
+      <RefTableId>61581</RefTableId>
       <RefColPositions>1</RefColPositions>
       <RefTableName>payments</RefTableName>
       <RefKeyName>payments_pkey</RefKeyName>
       <RefColNames>id</RefColNames>
+      <OnDelete>cascade</OnDelete>
+      <OnUpdate>cascade</OnUpdate>
     </foreign-key>
     <column id="84" parent="38" name="id">
       <Position>1</Position>
       <DataType>integer|0s</DataType>
       <NotNull>1</NotNull>
-      <StateNumber>56266</StateNumber>
+      <StateNumber>56384</StateNumber>
       <DefaultExpression>nextval(&apos;vehicles_id_seq&apos;::regclass)</DefaultExpression>
       <TypeId>23</TypeId>
     </column>
     <column id="85" parent="38" name="type">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
-      <StateNumber>56266</StateNumber>
+      <StateNumber>56384</StateNumber>
       <TypeId>1043</TypeId>
     </column>
     <index id="86" parent="38" name="vehicles_pkey">
-      <ObjectId>61236</ObjectId>
-      <StateNumber>56266</StateNumber>
+      <ObjectId>61670</ObjectId>
+      <StateNumber>56384</StateNumber>
       <ColNames>id</ColNames>
       <Unique>1</Unique>
       <Primary>1</Primary>
     </index>
     <key id="87" parent="38" name="vehicles_pkey">
-      <ObjectId>61237</ObjectId>
-      <StateNumber>56266</StateNumber>
+      <ObjectId>61671</ObjectId>
+      <StateNumber>56384</StateNumber>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
       <UnderlyingIndexName>vehicles_pkey</UnderlyingIndexName>
