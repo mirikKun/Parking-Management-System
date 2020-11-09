@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <floors id="1" floor_number="1" spot_number="40" parking_id="1"/>
+    <floors id="2" floor_number="2" spot_number="12" parking_id="1"/>
+    <floors id="3" floor_number="1" spot_number="35" parking_id="2"/>
+    <floors id="4" floor_number="2" spot_number="41" parking_id="2"/>
+</dataset>

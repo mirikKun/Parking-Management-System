@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <admins id="1" name="Bob Marley" address="Khreschatyk St, 14, Kyiv, 01001" email="marley@gmail.com" phone="+380505050505" account_id="1"/>
+    <admins id="2" name="Bob Dylan" address="Esplanadna St, 17, Kyiv, 02000" email="dylan@gmail.com" phone="+380665039348" account_id="2"/>
+    <admins id="3" name="Andrey Cartman" address="1 Naberezhno Khreshchatytska Str, Kyiv, 04070" email="cartman@gmail.com" phone="+380999932131" account_id="3"/>
+    <admins id="4" name="Some Guy" address="Brown Street 7" email="someguy@gmail.com" phone="+380963786265" account_id="3"/>
+</dataset>

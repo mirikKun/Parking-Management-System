@@ -1,0 +1,5 @@
+<dataset>
+    <payments id="1" creation_date="2020-11-07" amount="1300" status="Paid" type="Cash"/>
+    <payments id="2" creation_date="2020-10-06" amount="753" status="Not paid" type="Card"/>
+    <payments id="3" creation_date="2020-10-20" amount="155" status="Paid" type="Cash"/>
+</dataset>
