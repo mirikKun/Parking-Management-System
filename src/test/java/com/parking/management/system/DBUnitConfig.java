@@ -1,6 +1,9 @@
 package com.parking.management.system;
 
 import com.parking.management.system.dao.AccountDao;
+import com.parking.management.system.dao.SpotDao;
+import com.parking.management.system.dao.VehicleDao;
+import com.parking.management.system.dao.TicketDao;
 import com.parking.management.system.utils.ConnectionProvider;
 import com.parking.management.system.utils.TablesCreator;
 import org.dbunit.DBTestCase;
@@ -23,7 +26,9 @@ public class DBUnitConfig extends DBTestCase {
     protected IDataSet beforeData;
     protected ConnectionProvider connectionProvider = new ConnectionProvider();
     protected AccountDao accountDao = new AccountDao(connectionProvider);
-
+    protected SpotDao spotDao = new SpotDao(connectionProvider);
+    protected VehicleDao vehicleDao = new VehicleDao(connectionProvider);
+    protected TicketDao ticketDao = new TicketDao(connectionProvider);
     @Before
     public void setUp() throws Exception {
         tester = new JdbcDatabaseTester(properties.getProperty("driver"),
@@ -52,7 +57,6 @@ public class DBUnitConfig extends DBTestCase {
         ConnectionProvider connectionProvider = new ConnectionProvider();
         TablesCreator tablesCreator = new TablesCreator(connectionProvider);
         tablesCreator.createTables();
-        tablesCreator.fillTables();
     }
 
     @Override

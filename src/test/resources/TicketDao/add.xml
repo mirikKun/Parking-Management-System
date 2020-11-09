@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <tickets id="1" creation_date="2019-07-13" payment_id="1"/>
+    <tickets id="2" creation_date="2020-10-06" payment_id="2"/>
+    <tickets id="3" creation_date="2020-01-20" payment_id="3"/>
+    <tickets id="4" creation_date="2020-10-20" payment_id="3"/>
+</dataset>

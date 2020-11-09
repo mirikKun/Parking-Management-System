@@ -1,6 +1,5 @@
 package com.parking.management.system.dao;
 
-import com.parking.management.system.Dao;
 import com.parking.management.system.domain.Account;
 import com.parking.management.system.utils.ConnectionProvider;
 
