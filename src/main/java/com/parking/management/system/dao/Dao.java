@@ -1,4 +1,4 @@
-package com.parking.management.system;
+package com.parking.management.system.dao;
 
 import java.util.List;
 

@@ -1,0 +1,5 @@
+<dataset>
+    <floors id="1" floor_number="1" spot_number="40" parking_id="1"/>
+    <floors id="2" floor_number="2" spot_number="12" parking_id="1"/>
+    <floors id="3" floor_number="2" spot_number="42" parking_id="2"/>
+</dataset>

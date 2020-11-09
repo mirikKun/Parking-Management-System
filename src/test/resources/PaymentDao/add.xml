@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <payments id="1" creation_date="2020-11-07" amount="1300" status="Paid" type="Cash"/>
+    <payments id="2" creation_date="2020-10-06" amount="753" status="Not paid" type="Card"/>
+    <payments id="3" creation_date="2020-10-29" amount="1550" status="Paid" type="Cash"/>
+    <payments id="4" creation_date="2020-12-20" amount="800" status="Paid" type="Card"/>
+</dataset>
