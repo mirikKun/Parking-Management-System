@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <accounts id="1" username="username" password="password"/>
+    <accounts id="2" username="Qwerty" password="123456"/>
+    <accounts id="3" username="Andrey" password="1111"/>
+
+    <admins id="1" name="Bob Marley" address="Khreschatyk St, 14, Kyiv, 01001" email="marley@gmail.com" phone="+380505050505" account_id="1"/>
+    <admins id="2" name="Bob Dylan" address="Esplanadna St, 17, Kyiv, 02000" email="dylan@gmail.com" phone="+380665039348" account_id="2"/>
+    <admins id="3" name="Andrey Cartman" address="1 Naberezhno Khreshchatytska Str, Kyiv, 04070" email="cartman@gmail.com" phone="+380999932131" account_id="3"/>
+
+    <parkings id="1" address="Peremohy Ave, 37, Kyiv, 03056"/>
+    <parkings id="2" address="Shevchenka St, Dnipro, Dnipropetrovsk Oblast, 49000"/>
+
+    <floors id="1" floor_number="1" spot_number="40" parking_id="1"/>
+    <floors id="2" floor_number="2" spot_number="12" parking_id="1"/>
+    <floors id="3" floor_number="1" spot_number="35" parking_id="2"/>
+
+    <spots id="1" is_free="true" type="Compact" floor_id="1"/>
+    <spots id="2" is_free="false" type="Handicapped" floor_id="2"/>
+    <spots id="3" is_free="true" type="Electric" floor_id="3"/>
+
+    <payments id="1" creation_date="2020-11-07" amount="1300" status="Paid" type="Cash"/>
+    <payments id="2" creation_date="2020-10-06" amount="753" status="Not paid" type="Card"/>
+    <payments id="3" creation_date="2020-10-29" amount="1550" status="Paid" type="Cash"/>
+
+    <tickets id="1" creation_date="2019-07-13" payment_id="1"/>
+    <tickets id="2" creation_date="2020-10-06" payment_id="2"/>
+    <tickets id="3" creation_date="2020-01-20" payment_id="3"/>
+
+    <vehicles id="1" type="Car"/>
+    <vehicles id="2" type="Car"/>
+    <vehicles id="3" type="Truck"/>
+    <vehicles id="4" type="Electric"/>
+    <vehicles id="5" type="Motorbike"/>
+</dataset>

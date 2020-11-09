@@ -1,11 +1,7 @@
 package com.parking.management.system;
 
 import com.parking.management.system.dao.AccountDao;
-import com.parking.management.system.dao.AdminDao;
-import com.parking.management.system.dao.FloorDao;
-import com.parking.management.system.dao.ParkingDao;
-import com.parking.management.system.dao.PaymentDao;
-import com.parking.management.system.domain.Floor;
+
 import com.parking.management.system.utils.ConnectionProvider;
 import com.parking.management.system.utils.TablesCreator;
 import org.dbunit.DBTestCase;
@@ -28,10 +24,6 @@ public class DBUnitConfig extends DBTestCase {
     protected IDataSet beforeData;
     protected ConnectionProvider connectionProvider = new ConnectionProvider();
     protected AccountDao accountDao = new AccountDao(connectionProvider);
-    protected AdminDao adminDao = new AdminDao(connectionProvider);
-    protected FloorDao floorDao = new FloorDao(connectionProvider);
-    protected ParkingDao parkingDao = new ParkingDao(connectionProvider);
-    protected PaymentDao paymentDao = new PaymentDao(connectionProvider);
 
     @Before
     public void setUp() throws Exception {

@@ -1,0 +1,5 @@
+<dataset>
+    <spots id="1" is_free="true" type="Compact" floor_id="1"/>
+    <spots id="2" is_free="false" type="Handicapped" floor_id="2"/>
+    <spots id="3" is_free="true" type="updated" floor_id="3"/>
+</dataset>
