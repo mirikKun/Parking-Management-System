@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataset>
+    <spots id="1" is_free="true" type="Compact" floor_id="1"/>
+    <spots id="2" is_free="false" type="Handicapped" floor_id="2"/>
+    <spots id="3" is_free="true" type="Electric" floor_id="3"/>
+    <spots id="4" is_free="false" type="NEW" floor_id="1"/>
+</dataset>

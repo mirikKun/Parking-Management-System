@@ -1,0 +1,7 @@
+<dataset>
+    <vehicles id="1" type="Car"/>
+    <vehicles id="2" type="Car"/>
+    <vehicles id="3" type="Truck"/>
+    <vehicles id="4" type="Electric"/>
+    <vehicles id="5" type="Car"/>
+</dataset>
