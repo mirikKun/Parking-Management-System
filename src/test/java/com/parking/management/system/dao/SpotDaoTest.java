@@ -2,6 +2,7 @@ package com.parking.management.system.dao;
 
 import com.parking.management.system.DBUnitConfig;
 import com.parking.management.system.DBUnitConfigParametrResolver;
+import com.parking.management.system.domain.Account;
 import com.parking.management.system.domain.Spot;
 import com.parking.management.system.domain.Spot;
 import org.dbunit.Assertion;
@@ -95,4 +96,5 @@ class SpotDaoTest extends DBUnitConfig {
 
         assertEquals(expectedSpot, actualSpot.get());
     }
+
 }
