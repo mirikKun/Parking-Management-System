@@ -6,6 +6,7 @@ import com.parking.management.system.utils.ConnectionProvider;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static java.sql.Statement.RETURN_GENERATED_KEYS;
 
@@ -22,19 +23,19 @@ public class FloorDao implements Dao<Floor>{
     public FloorDao(ConnectionProvider connectionProvider) { this.connectionProvider = connectionProvider; }
 
     @Override
-    public Floor getById(int id) {
+    public Optional<Floor> getById(int id) {
         try (Connection connection = connectionProvider.getConnection();
              PreparedStatement statement = connection.prepareStatement(GET_FLOOR_BY_ID)) {
             statement.setInt(1, id);
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
-                    return mapToFloor(resultSet);
+                    return Optional.of(mapToFloor(resultSet));
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return Optional.empty();
     }
 
 

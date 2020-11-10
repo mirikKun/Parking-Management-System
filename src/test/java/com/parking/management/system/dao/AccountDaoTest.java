@@ -14,6 +14,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -88,8 +89,17 @@ class AccountDaoTest extends DBUnitConfig {
     void givenAccountId_whenGetById_thenReturnedAccountWithGivenId() {
         Account expectedAccount = new Account(1, "username", "password");
 
-        Account actualAccount = accountDao.getById(1);
+        Optional<Account> actualAccount = accountDao.getById(1);
 
-        assertEquals(expectedAccount, actualAccount);
+        assertEquals(expectedAccount, actualAccount.get());
+    }
+
+    @Test
+    void givenUsernameOfFirstAccount_whenGetByUsername_thenReturnedAccountWithGivenUsername() {
+        Account expectedAccount = new Account(1, "username", "password");
+
+        Optional<Account> actualAccount = accountDao.getByUsername("username");
+
+        assertEquals(expectedAccount, actualAccount.get());
     }
 }

@@ -17,6 +17,7 @@ import java.io.File;
 import java.net.MalformedURLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(DBUnitConfigParametrResolver.class)
@@ -90,8 +91,8 @@ class SpotDaoTest extends DBUnitConfig {
     void givenSpotId_whenGetById_thenReturnedSpotWithGivenId() {
         Spot expectedSpot = new Spot(1 ,true ,"Compact" ,1);
 
-        Spot actualSpot = spotDao.getById(1);
+        Optional<Spot> actualSpot = spotDao.getById(1);
 
-        assertEquals(expectedSpot, actualSpot);
+        assertEquals(expectedSpot, actualSpot.get());
     }
 }

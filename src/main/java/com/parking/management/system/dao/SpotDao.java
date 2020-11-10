@@ -6,6 +6,7 @@ import com.parking.management.system.utils.ConnectionProvider;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static java.sql.Statement.RETURN_GENERATED_KEYS;
 
@@ -25,19 +26,19 @@ public class SpotDao implements Dao<Spot> {
 
 
     @Override
-    public Spot getById(int id) {
+    public Optional<Spot> getById(int id) {
         try (Connection connection = connectionProvider.getConnection();
              PreparedStatement statement = connection.prepareStatement(GET_SPOT_BY_ID)) {
             statement.setInt(1, id);
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
-                    return mapToSpot(resultSet);
+                    return Optional.of(mapToSpot(resultSet));
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
