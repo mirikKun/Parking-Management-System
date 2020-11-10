@@ -17,7 +17,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(DBUnitConfigParametrResolver.class)
-class FloorDaoTest extends DBUnitConfig{
+class FloorDaoTest extends DBUnitConfig {
 
     public FloorDaoTest(String name) throws Exception {
         super(name);
