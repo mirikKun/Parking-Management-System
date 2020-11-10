@@ -14,6 +14,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -88,8 +89,8 @@ class AdminDaoTest extends DBUnitConfig{
     void givenAdminId_whenGetById_thenReturnedAdminWithGivenId() {
         Admin expectedAdmin = new Admin(1, "Bob Marley", "Khreschatyk St, 14, Kyiv, 01001", "marley@gmail.com", "+380505050505", 1);
 
-        Admin actualAdmin = adminDao.getById(1);
+        Optional<Admin> actualAdmin = adminDao.getById(1);
 
-        assertEquals(expectedAdmin, actualAdmin);
+        assertEquals(expectedAdmin, actualAdmin.get());
     }
 }

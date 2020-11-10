@@ -18,6 +18,7 @@ import java.net.MalformedURLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(DBUnitConfigParametrResolver.class)
@@ -91,8 +92,8 @@ class TicketDaoTest extends DBUnitConfig{
     void givenTicketId_whenGetById_thenReturnedTicketWithGivenId() {
         Ticket expectedTicket = new Ticket(1,LocalDate.parse("2019-07-13"),1);
 
-        Ticket actualTicket = ticketDao.getById(1);
+        Optional<Ticket> actualTicket = ticketDao.getById(1);
 
-        assertEquals(expectedTicket, actualTicket);
+        assertEquals(expectedTicket, actualTicket.get());
     }
 }

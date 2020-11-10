@@ -9,6 +9,7 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static java.sql.Statement.RETURN_GENERATED_KEYS;
 public class VehicleDao implements Dao<Vehicle> {
@@ -25,19 +26,19 @@ public class VehicleDao implements Dao<Vehicle> {
     }
 
     @Override
-    public Vehicle getById(int id) {
+    public Optional<Vehicle> getById(int id) {
         try (Connection connection = connectionProvider.getConnection();
              PreparedStatement statement = connection.prepareStatement(GET_VEHICLE_BY_ID)) {
             statement.setInt(1, id);
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
-                    return mapToVehicle(resultSet);
+                    return Optional.of(mapToVehicle(resultSet));
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
