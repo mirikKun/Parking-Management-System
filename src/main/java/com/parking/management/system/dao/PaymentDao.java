@@ -7,6 +7,7 @@ import java.sql.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static java.sql.Statement.RETURN_GENERATED_KEYS;
 
@@ -27,19 +28,19 @@ public class PaymentDao implements Dao<Payment>{
 
 
     @Override
-    public Payment getById(int id) {
+    public Optional<Payment> getById(int id) {
         try (Connection connection = connectionProvider.getConnection();
              PreparedStatement statement = connection.prepareStatement(GET_PAYMENT_BY_ID)) {
             statement.setInt(1, id);
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
-                    return mapToPayment(resultSet);
+                    return Optional.of(mapToPayment(resultSet));
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override

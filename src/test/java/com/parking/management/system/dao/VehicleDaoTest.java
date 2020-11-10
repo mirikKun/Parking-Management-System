@@ -14,6 +14,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -91,8 +92,8 @@ class VehicleDaoTest extends DBUnitConfig {
     void givenVehicleId_whenGetById_thenReturnedVehicleWithGivenId() {
         Vehicle expectedVehicle = new Vehicle(1,"Car");
 
-        Vehicle actualVehicle = vehicleDao.getById(1);
+        Optional<Vehicle> actualVehicle = vehicleDao.getById(1);
 
-        assertEquals(expectedVehicle, actualVehicle);
+        assertEquals(expectedVehicle, actualVehicle.get());
     }
 }

@@ -14,6 +14,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(DBUnitConfigParametrResolver.class)
@@ -87,8 +88,8 @@ class FloorDaoTest extends DBUnitConfig {
     void givenFloorId_whenGetById_thenReturnedFloorWithGivenId() {
         Floor expectedFloor = new Floor(1, 1, 40, 1);
 
-        Floor actualFloor = floorDao.getById(1);
+        Optional<Floor> actualFloor = floorDao.getById(1);
 
-        assertEquals(expectedFloor, actualFloor);
+        assertEquals(expectedFloor, actualFloor.get());
     }
 }

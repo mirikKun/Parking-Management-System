@@ -6,6 +6,7 @@ import com.parking.management.system.utils.ConnectionProvider;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static java.sql.Statement.RETURN_GENERATED_KEYS;
 
@@ -18,25 +19,26 @@ public class AccountDao implements Dao<Account> {
     private static final String CREATE_ACCOUNT_SQL = "INSERT INTO accounts VALUES (DEFAULT, ?, ?)";
     private static final String UPDATE_ACCOUNT_SQL = "UPDATE accounts SET username = ?, password = ? WHERE id = ?";
     private static final String DELETE_ACCOUNT_SQL = "DELETE FROM accounts WHERE id = ?";
+    private static final String GET_BY_USERNAME_SQL = "SELECT * FROM accounts WHERE username = ?";
 
     public AccountDao(ConnectionProvider connectionProvider) {
         this.connectionProvider = connectionProvider;
     }
 
     @Override
-    public Account getById(int id) {
+    public Optional<Account> getById(int id) {
         try (Connection connection = connectionProvider.getConnection();
              PreparedStatement statement = connection.prepareStatement(GET_ACCOUNT_BY_ID)) {
             statement.setInt(1, id);
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
-                    return mapToAccount(resultSet);
+                    return Optional.of(mapToAccount(resultSet));
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return Optional.empty();
     }
 
     @Override
@@ -98,5 +100,20 @@ public class AccountDao implements Dao<Account> {
     private Account mapToAccount(ResultSet resultSet) throws SQLException {
         return new Account(resultSet.getInt("id"), resultSet.getString("username"),
                 resultSet.getString("password"));
+    }
+
+    public Optional<Account> getByUsername(String username) {
+        try (Connection connection = connectionProvider.getConnection();
+             PreparedStatement statement = connection.prepareStatement(GET_BY_USERNAME_SQL)) {
+            statement.setString(1, username);
+            try (ResultSet resultSet = statement.executeQuery()) {
+                if (resultSet.next()) {
+                    return Optional.of(mapToAccount(resultSet));
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return Optional.empty();
     }
 }

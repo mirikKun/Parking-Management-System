@@ -1,10 +1,11 @@
 package com.parking.management.system.dao;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface Dao<T> {
 
-    T getById(int id);
+    Optional<T> getById(int id);
 
     List<T> getAll();
 

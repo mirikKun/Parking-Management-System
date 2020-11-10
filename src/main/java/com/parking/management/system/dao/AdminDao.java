@@ -7,6 +7,7 @@ import com.parking.management.system.utils.ConnectionProvider;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static java.sql.Statement.RETURN_GENERATED_KEYS;
 
@@ -23,19 +24,19 @@ public class AdminDao implements Dao<Admin> {
     public AdminDao(ConnectionProvider connectionProvider) { this.connectionProvider = connectionProvider; }
 
     @Override
-    public Admin getById(int id) {
+    public Optional<Admin> getById(int id) {
         try (Connection connection = connectionProvider.getConnection();
              PreparedStatement statement = connection.prepareStatement(GET_ADMIN_BY_ID)) {
             statement.setInt(1, id);
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
-                    return mapToAdmin(resultSet);
+                    return Optional.of(mapToAdmin(resultSet));
                 }
             }
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return Optional.empty();
     }
 
 

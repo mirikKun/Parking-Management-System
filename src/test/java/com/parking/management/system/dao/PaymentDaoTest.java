@@ -16,6 +16,7 @@ import java.io.File;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(DBUnitConfigParametrResolver.class)
@@ -89,8 +90,8 @@ class PaymentDaoTest extends DBUnitConfig{
     void givenPaymentId_whenGetById_thenReturnedPaymentWithGivenId() {
         Payment expectedPayment = new Payment(1, LocalDate.parse("2020-11-07"), 1300, "Paid", "Cash");
 
-        Payment actualPayment = paymentDao.getById(1);
+        Optional<Payment> actualPayment = paymentDao.getById(1);
 
-        assertEquals(expectedPayment, actualPayment);
+        assertEquals(expectedPayment, actualPayment.get());
     }
 }

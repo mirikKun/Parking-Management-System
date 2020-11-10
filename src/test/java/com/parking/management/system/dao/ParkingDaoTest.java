@@ -15,6 +15,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.*;
 @ExtendWith(DBUnitConfigParametrResolver.class)
@@ -87,8 +88,8 @@ class ParkingDaoTest extends DBUnitConfig{
     void givenParkingId_whenGetById_thenReturnedParkingWithGivenId() {
         Parking expectedParking = new Parking(1, "Peremohy Ave, 37, Kyiv, 03056");
 
-        Parking actualParking = parkingDao.getById(1);
+        Optional<Parking> actualParking = parkingDao.getById(1);
 
-        assertEquals(expectedParking, actualParking);
+        assertEquals(expectedParking, actualParking.get());
     }
 }
